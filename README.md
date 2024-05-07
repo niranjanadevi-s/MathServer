@@ -1,11 +1,18 @@
-~~~
-Ex.05 Design a Website for Server Side Processing
-Date: 5.04.2024
+## Ex.05 Design a Website for Server Side Processing
+## Date: 5.04.2024
 
-AIM:
+## AIM:
 To design a website to find surface area of a Right Cylinder in server side.
 
-DESIGN STEPS:
+# FORMULA:
+
+![image](https://github.com/niranjanadevi-s/MathServer/assets/141748873/7d5cb0fc-1280-4c34-9645-2251d2a94f0f)
+
+Surface Area = 2Πrh + 2Πr<sup>2</sup>
+<br>r --> Radius of Right Cylinder
+<br>h --> Height of Right Cylinder
+
+## DESIGN STEPS:
 
 Step 1:  Clone the repository from GitHub.
 Step 2:  Create Django Admin project.
@@ -14,9 +21,9 @@ Step 4:  Create python programs for views and urls to perform server side proces
 Step 5:  Create a HTML file to implement form based input and output.
 Step 6:  Publish the website in the given URL.
 
-PROGRAM :
+## PROGRAM :
 
-math.html
+# math.html
 
 <html>
 <head>
@@ -80,7 +87,7 @@ math.html
 </body>
 </html>
 
-views.py
+# views.py
 
 from django.shortcuts import render
 def rectarea(request):
@@ -122,7 +129,7 @@ def rectarea(request):
         print('Area=',area)
     return render(request,'mathserverapp/math.html',context)
 
-urls.py
+# urls.py
 """
 URL configuration for mathserver project.
 
@@ -148,14 +155,7 @@ urlpatterns = [
     path('',views.rectarea,name="areaofrectangleroot")
 ]
 ~~~
-FORMULA:
 
-![image](https://github.com/niranjanadevi-s/MathServer/assets/141748873/7d5cb0fc-1280-4c34-9645-2251d2a94f0f)
-
-
-Surface Area = 2Πrh + 2Πr<sup>2</sup>
-<br>r --> Radius of Right Cylinder
-<br>h --> Height of Right Cylinder
 ## SERVER SIDE PROCESSING:
 
 ![image](https://github.com/niranjanadevi-s/MathServer/assets/141748873/b2bff026-b5d6-4f27-95d2-725e9f00388c)
