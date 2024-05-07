@@ -24,7 +24,7 @@ Step 6:  Publish the website in the given URL.
 ## PROGRAM :
 
 # math.html
-
+~~~
 <html>
 <head>
     <meta charset='utf-8'>
@@ -86,9 +86,9 @@ Step 6:  Publish the website in the given URL.
     </div>
 </body>
 </html>
-
+~~~
 # views.py
-
+~~~
 from django.shortcuts import render
 def rectarea(request):
     context={}
@@ -128,8 +128,9 @@ def rectarea(request):
         context['b'] = b
         print('Area=',area)
     return render(request,'mathserverapp/math.html',context)
-
+~~~
 # urls.py
+~~~
 """
 URL configuration for mathserver project.
 
