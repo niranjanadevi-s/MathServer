@@ -1,50 +1,32 @@
-# Ex.05 Design a Website for Server Side Processing
-## Date: 5.04.2024
+Ex.05 Design a Website for Server Side Processing
+Date: 5.04.2024
 
-## AIM:
+AIM:
 To design a website to find surface area of a Right Cylinder in server side.
 
-## FORMULA:
+DESIGN STEPS:
 
+Step 1: Clone the repository from GitHub.
+Step 2: Create Django Admin project.
+Step 3: Create a New App under the Django Admin project.
+Step 4: Create python programs for views and urls to perform server side processing.
+Step 5: Create a HTML file to implement form based input and output.
+Step 6: Publish the website in the given URL.
+
+FORMULA:
+~~~
 ![image](https://github.com/niranjanadevi-s/MathServer/assets/141748873/7d5cb0fc-1280-4c34-9645-2251d2a94f0f)
 
 
 Surface Area = 2Πrh + 2Πr<sup>2</sup>
 <br>r --> Radius of Right Cylinder
 <br>h --> Height of Right Cylinder
-
-## DESIGN STEPS:
-
-### Step 1:
-Clone the repository from GitHub.
-
-### Step 2:
-Create Django Admin project.
-
-### Step 3:
-Create a New App under the Django Admin project.
-
-### Step 4:
-Create python programs for views and urls to perform server side processing.
-
-### Step 5:
-Create a HTML file to implement form based input and output.
-
-### Step 6:
-Publish the website in the given URL.
-
-Name: Niranjana Devi S
-
-Reg No: 212221220036
-
-## PROGRAM :
-
-## math.html
-
 ~~~
+PROGRAM :
+
+math.html
 
 <html>
-
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -54,7 +36,6 @@ Reg No: 212221220036
         body {
             background-color: red;
         }
-
         .edge {
             width: 1440px;
             margin-left: auto;
@@ -62,7 +43,6 @@ Reg No: 212221220036
             padding-top: 250px;
             padding-left: 300px;
         }
-
         .box {
             display: block;
             border: Thick dashed lime;
@@ -71,14 +51,12 @@ Reg No: 212221220036
             font-size: 20px;
             background-color: blue;
         }
-
-        .formelt {
+        formelt {
             color: orange;
             text-align: center;
             margin-top: 7px;
             margin-bottom: 6px;
         }
-
         h1 {
             color: rgb(255, 0, 179);
             text-align: center;
@@ -86,7 +64,6 @@ Reg No: 212221220036
         }
     </style>
 </head>
-
 <body>
     <div class="edge">
         <div class="box">
@@ -109,14 +86,9 @@ Reg No: 212221220036
         </div>
     </div>
 </body>
-
 </html>
-~~~
 
-## views.py
-
-~~~
-
+views.py
 
 from django.shortcuts import render
 def rectarea(request):
@@ -138,8 +110,6 @@ def rectarea(request):
         print('Area=',area)
     return render(request,'mathserverapp/math.html',context)
 
-
-
 from django.shortcuts import render
 def rectarea(request):
     context={}
@@ -160,11 +130,7 @@ def rectarea(request):
         print('Area=',area)
     return render(request,'mathserverapp/math.html',context)
 
-~~~
-
-## urls.py
-
-~~~
+urls.py
 """
 URL configuration for mathserver project.
 
@@ -190,18 +156,13 @@ urlpatterns = [
     path('',views.rectarea,name="areaofrectangleroot")
 ]
 ~~~
-
-
 ## SERVER SIDE PROCESSING:
 
 ![image](https://github.com/niranjanadevi-s/MathServer/assets/141748873/b2bff026-b5d6-4f27-95d2-725e9f00388c)
 
-
 ## HOMEPAGE:
 
 ![image](https://github.com/niranjanadevi-s/MathServer/assets/141748873/fa8705b1-6c2c-498b-bcaa-a131fbc09fd5)
-
-
 
 ## RESULT:
 The program for performing server side processing is completed successfully.
