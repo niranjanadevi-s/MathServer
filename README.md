@@ -1,3 +1,4 @@
+~~~
 Ex.05 Design a Website for Server Side Processing
 Date: 5.04.2024
 
@@ -6,12 +7,12 @@ To design a website to find surface area of a Right Cylinder in server side.
 
 DESIGN STEPS:
 
-Step 1: Clone the repository from GitHub.
-Step 2: Create Django Admin project.
-Step 3: Create a New App under the Django Admin project.
-Step 4: Create python programs for views and urls to perform server side processing.
-Step 5: Create a HTML file to implement form based input and output.
-Step 6: Publish the website in the given URL.
+Step 1:  Clone the repository from GitHub.
+Step 2:  Create Django Admin project.
+Step 3:  Create a New App under the Django Admin project.
+Step 4:  Create python programs for views and urls to perform server side processing.
+Step 5:  Create a HTML file to implement form based input and output.
+Step 6:  Publish the website in the given URL.
 
 FORMULA:
 ~~~
