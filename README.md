@@ -14,15 +14,6 @@ Step 4:  Create python programs for views and urls to perform server side proces
 Step 5:  Create a HTML file to implement form based input and output.
 Step 6:  Publish the website in the given URL.
 
-FORMULA:
-~~~
-![image](https://github.com/niranjanadevi-s/MathServer/assets/141748873/7d5cb0fc-1280-4c34-9645-2251d2a94f0f)
-
-
-Surface Area = 2Πrh + 2Πr<sup>2</sup>
-<br>r --> Radius of Right Cylinder
-<br>h --> Height of Right Cylinder
-~~~
 PROGRAM :
 
 math.html
@@ -157,6 +148,14 @@ urlpatterns = [
     path('',views.rectarea,name="areaofrectangleroot")
 ]
 ~~~
+FORMULA:
+
+![image](https://github.com/niranjanadevi-s/MathServer/assets/141748873/7d5cb0fc-1280-4c34-9645-2251d2a94f0f)
+
+
+Surface Area = 2Πrh + 2Πr<sup>2</sup>
+<br>r --> Radius of Right Cylinder
+<br>h --> Height of Right Cylinder
 ## SERVER SIDE PROCESSING:
 
 ![image](https://github.com/niranjanadevi-s/MathServer/assets/141748873/b2bff026-b5d6-4f27-95d2-725e9f00388c)
