@@ -15,14 +15,18 @@ Surface Area = 2Πrh + 2Πr<sup>2</sup>
 ## DESIGN STEPS:
 
 Step 1:  Clone the repository from GitHub.
+
 Step 2:  Create Django Admin project.
+
 Step 3:  Create a New App under the Django Admin project.
+
 Step 4:  Create python programs for views and urls to perform server side processing.
+
 Step 5:  Create a HTML file to implement form based input and output.
+
 Step 6:  Publish the website in the given URL.
 
 ## PROGRAM :
-
 # math.html
 ~~~
 <html>
@@ -55,13 +59,7 @@ Step 6:  Publish the website in the given URL.
             text-align: center;
             margin-top: 7px;
             margin-bottom: 6px;
-        }
-        h1 {
-            color: rgb(255, 0, 179);
-            text-align: center;
-            padding-top: 20px;
-        }
-    </style>
+        }</style>
 </head>
 <body>
     <div class="edge">
@@ -86,9 +84,22 @@ Step 6:  Publish the website in the given URL.
     </div>
 </body>
 </html>
-~~~
 # views.py
-~~~
+from django.shortcuts import render
+def rectarea(request):
+    context={}
+    context['area'] = "0"
+    context['l'] = "0"
+    context['b'] = "0"
+    if request.method == 'POST':
+        print("POST method is used")
+        l = request.POST.get('length','0')
+        b = request.POST.get('breadth','0')
+        context['area'] = area
+        context['l'] = l
+        context['b'] = b
+        print('Area=',area)
+    return render(request,'mathserverapp/math.html',context)
 from django.shortcuts import render
 def rectarea(request):
     context={}
@@ -108,47 +119,11 @@ def rectarea(request):
         context['b'] = b
         print('Area=',area)
     return render(request,'mathserverapp/math.html',context)
-
-from django.shortcuts import render
-def rectarea(request):
-    context={}
-    context['area'] = "0"
-    context['l'] = "0"
-    context['b'] = "0"
-    if request.method == 'POST':
-        print("POST method is used")
-        l = request.POST.get('length','0')
-        b = request.POST.get('breadth','0')
-        print('request=',request)
-        print('Length=',l)
-        print('Breadth=',b)
-        area = 2*(int(l)**2) + 4*int(l)*int(b)
-        context['area'] = area
-        context['l'] = l
-        context['b'] = b
-        print('Area=',area)
-    return render(request,'mathserverapp/math.html',context)
-~~~
 # urls.py
-~~~
 """
 URL configuration for mathserver project.
-
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
-from django.urls import path
+    https://docs.djangoproject.com/en/4.2/topics/http/urlsfrom django.urls import path
 from mathserverapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -156,14 +131,9 @@ urlpatterns = [
     path('',views.rectarea,name="areaofrectangleroot")
 ]
 ~~~
-
 ## SERVER SIDE PROCESSING:
-
 ![image](https://github.com/niranjanadevi-s/MathServer/assets/141748873/b2bff026-b5d6-4f27-95d2-725e9f00388c)
-
 ## HOMEPAGE:
-
 ![image](https://github.com/niranjanadevi-s/MathServer/assets/141748873/fa8705b1-6c2c-498b-bcaa-a131fbc09fd5)
-
 ## RESULT:
 The program for performing server side processing is completed successfully.
