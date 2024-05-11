@@ -28,7 +28,7 @@ Step 6:  Publish the website in the given URL.
 
 ## PROGRAM :
 # math.html
-?*
+~~~
 <html>
 <head>
     <meta charset='utf-8'>
@@ -118,18 +118,7 @@ def rectarea(request):
         context['l'] = l
         context['b'] = b
         print('Area=',area)
-    return render(request,'mathserverapp/math.html',context)
-# urls.py
-URL configuration for mathserver project.
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urlsfrom django.urls import path
-from mathserverapp import views
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('areaofrectangle/',views.rectarea,name="areaofrectangle"),
-    path('',views.rectarea,name="areaofrectangleroot")
-]
-*/
+~~~
 ## SERVER SIDE PROCESSING:
 ![image](https://github.com/niranjanadevi-s/MathServer/assets/141748873/b2bff026-b5d6-4f27-95d2-725e9f00388c)
 ## HOMEPAGE:
