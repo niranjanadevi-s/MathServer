@@ -54,6 +54,8 @@ Step 6:  Publish the website in the given URL.
             font-size: 20px;
             background-color: blue;
         }
+~~~
+~~~
         formelt {
             color: orange;
             text-align: center;
